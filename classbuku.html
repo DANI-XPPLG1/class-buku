@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class buku{
+            #id;
+            #title;
+            #price;
+            #author;
+            #date;
+            set id (id){ 
+                 this.#id=id; 
+             }  
+             get id (){ 
+                 return this.#id; 
+             } 
+             get title(){ 
+                 
+                  
+                 return this.#title; 
+             } 
+             set title(title){ 
+                if(title.length< 5){ 
+                 document.write("harus 5 angka beb"+'<br/>') 
+                } 
+                 this.#title=title; 
+             } 
+             
+             get price(){
+               return this.#price;
+             }
+            set price(price){
+            if(price < 18){
+              document.write("harus berupa angka"+"<br/>"+"<hr/>")
+            }
+              this.#price=price;
+            }
+           get author(){
+             return this.#author;
+           }
+           set author(author){
+             this.#author=author;
+           }
+           get date(){
+            return this.#date;
+
+           }
+           set date(date){
+            this.#date=date;
+           }
+         } 
+         var buku1 = new buku();
+         buku1.id = "Dani didiyeu";
+         buku1.title = "sang pecinta smile";
+         buku1.price = 50000;
+         buku1.date = "23-02-2023";
+
+         document.write("id = " + buku1.id + '<br />')
+         document.write("title = "+buku1.title + '<br />')
+         document.write("harga = "+buku1.price + '<br />')
+         document.write("tanggal = "+buku1.date + '<br />')
+    </script>
+</body>
+</html>
